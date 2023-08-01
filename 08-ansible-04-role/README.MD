@@ -1,4 +1,4 @@
-# Whatt maded this playbook
+# What maded this playbook
 
 Deploys 3 virtual machines on the cloud: Clickhouse, Lighthouse and Vector. Configures them using configs and installing Nginx and displays the contents of the tables in Lighthouse in a web application.
 
