@@ -80,18 +80,29 @@ Deploy [Vector](https://packages.timber.io/vector) monitoring system using ansib
 #### Example
 
 ```
-lighthouse_configs:
-server {
-    listen       80;
-    server_name  localhost
-    
-    access_log  /var/log/nginx {{ lighthouse_access_log_name }}.log  main;
-    
-    location / {
-        root   {{ lighthouse_location_dir }};
-        index  index.html;
-    }
-}
+vector_configs:
+vector_url: https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-1.x86_64.rpm
+vector_version: 0.31.0
+nginx_user_name: root
+vector_config:
+  sources:
+      our_log:
+        ignore_older_secs: 600
+        include:
+          - /var/log/nginx/access.log
+        read_from: beginning
+        type: file
+  sinks:
+    to_clickhouse:
+      type: clickhouse
+      inputs:
+        - our_log
+      database: logs
+      endpoint: http://{{ hostvars['clickhouse-01'].ansible_default_ipv4.address }}:8123
+      table: access_logs
+      compression: gzip
+      healthcheck: false
+      skip_unknown_fields: true
 ```
 
 ## Example
@@ -99,22 +110,35 @@ server {
 ### Playbook
 
 ```yaml
-- name: Lighthouse | install git
+- name: VECTOR | Install rpm
   become: true
   ansible.builtin.yum:
-    name: git
+    name: "{{ vector_url }}"
     state: present
-- name: Lighthouse | Copy from git
-  become: true
-  ansible.builtin.git:
-    repo: "{{ lighthouse_vcs }}"
-    version: master
-    dest: "{{ lighthouse_location_dir }}"
-- name: Lighthouse | Create lighthouse config
+- name: VECTOR | Template config
   become: true
   ansible.builtin.template:
-    src: lighthouse.conf.j2
-    dest: /etc/nginx/conf.d/default.conf
-    mode: 0644
-  notify: Reload nginx
+    src: templates/vector.yml.j2
+    dest: /etc/vector/vector.yml
+    mode: '0644'
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    validate: vector validate --no-environment --config-yaml %s
+- name: VECTOR | Create systemd unit
+  become: true
+  ansible.builtin.template:
+    src: templates/vector.service.j2
+    dest: /etc/systemd/system/vector.service
+    mode: '0644'
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+- name: VECTOR | Start service
+  become: true
+  ansible.builtin.systemd:
+    name: vector
+    state: started
+    daemon_reload: true
 ```
+
+# Other 
+
