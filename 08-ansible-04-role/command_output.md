@@ -1,3 +1,6 @@
+# Так как данный плейбук по назначению и работе идентичен плейбуку из предыдущего урока то здесь выкладываю вывод из терминала. И скрин вебморды Vector после окончания работы плейбука.
+
+
 ```
 [sam@localhost playbook]$ ansible-galaxy install -r requirements.yml -p roles
 Starting galaxy role install process
@@ -190,3 +193,4 @@ clickhouse-01              : ok=24   changed=8    unreachable=0    failed=0    s
 clickhouse-02              : ok=10   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 clickhouse-03              : ok=10   changed=9    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/8f651dba-a21a-45cb-a427-a97414fd3bb3)
