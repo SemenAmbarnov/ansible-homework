@@ -140,5 +140,22 @@ vector_config:
     daemon_reload: true
 ```
 
-# Other 
+# Other important parameters
+
+All repositories addresses are specified in the file: requirements.yml
+
+## Example
+
+```yaml
+  - name: clickhouse
+    src: git@github.com:AlexeySetevoi/ansible-clickhouse.git
+    scm: git
+    version: "1.13"
+  - name: lighthouse
+    src: git@github.com:SemenAmbarnov/lighthouse-role.git
+    scm: git
+  - name: vector
+    src: git@github.com:SemenAmbarnov/vector-role.git
+    scm: git
+```
 
