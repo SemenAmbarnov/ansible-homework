@@ -158,4 +158,25 @@ All repositories addresses are specified in the file: requirements.yml
     src: git@github.com:SemenAmbarnov/vector-role.git
     scm: git
 ```
-# The file inventory/prod.yaml must contain the addresses of virtual machines
+## The file inventory/prod.yaml must contain the addresses of virtual machines
+
+## Example
+
+```yaml
+---
+clickhouse:
+  hosts:
+    clickhouse-01:
+      ansible_host: (ip_vm)
+      ansible_ssh_user: (user_name)
+lighthouse:
+  hosts:
+    clickhouse-02:
+      ansible_host: (ip_vm)
+      ansible_ssh_user: (user_name)
+vector:
+  hosts:
+    clickhouse-03:
+      ansible_host: (ip_vm)
+      ansible_ssh_user: (user_name)
+
