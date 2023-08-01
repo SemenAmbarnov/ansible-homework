@@ -158,4 +158,4 @@ All repositories addresses are specified in the file: requirements.yml
     src: git@github.com:SemenAmbarnov/vector-role.git
     scm: git
 ```
-
+# The file inventory/prod.yaml must contain the addresses of virtual machines
