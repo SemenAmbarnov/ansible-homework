@@ -285,7 +285,7 @@ INFO     Running centos_7 > cleanup
    
 6. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
  
- [Ссылка на vector v.1.1.0](https://github.com/SemenAmbarnov/vector-role/tree/v1.2.1) 
+ [Ссылка на vector v.1.2.1](https://github.com/SemenAmbarnov/vector-role/tree/v1.2.1) 
 
 
 ### Tox
