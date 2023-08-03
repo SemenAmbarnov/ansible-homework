@@ -242,8 +242,48 @@ INFO     Pruning extra files from scenario ephemeral directory
 ```
 
 4. Добавьте несколько assert в verify.yml-файл для  проверки работоспособности vector-role (проверка, что конфиг валидный, проверка успешности запуска и др.). 
+
+```
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: Example assertion
+    assert:
+      that: true
+  - name: Check NGINX configs
+    shell: vector validate --no-environment --config-yaml /etc/vector/vector.yml
+  - name: Check NGINX status
+    shell: ps aux | grep vector
+```
 5. Запустите тестирование роли повторно и проверьте, что оно прошло успешно.
-5. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
+
+```
+PLAY [Verify] ******************************************************************
+
+TASK [Example assertion] *******************************************************
+ok: [instance] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [Check NGINX configs] *****************************************************
+changed: [instance]
+
+TASK [Check NGINX status] ******************************************************
+changed: [instance]
+
+PLAY RECAP *********************************************************************
+instance                   : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+INFO     Verifier completed successfully.
+INFO     Running centos_7 > cleanup
+```
+   
+6. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
 ### Tox
 
