@@ -15,6 +15,74 @@
 
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/e982620a-0a87-4db4-aa47-f10c16ec5877)
 
+**Шаг 5.** Напишите single task playbook и используйте module в нём.
 
+**Шаг 6.** Проверьте через playbook на идемпотентность.
 
+```
+(venv) [sam@localhost ansible]$ ansible-playbook site.yml 
+[WARNING]: You are running the development version of Ansible. You should only run Ansible from "devel" if you are modifying the Ansible engine, or trying out features under development. This is a
+rapidly changing source of code and can become unstable at any point.
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
 
+PLAY [test module] *****************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [test_my_own_module] **********************************************************************************************************************************************************************************
+changed: [localhost]
+
+TASK [info] ************************************************************************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": "STATUS file recorder."
+}
+
+PLAY RECAP *************************************************************************************************************************************************************************************************
+localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+(venv) [sam@localhost ansible]$ ansible-playbook site.yml  ansible-playbook site.yml
+[WARNING]: You are running the development version of Ansible. You should only run Ansible from "devel" if you are modifying the Ansible engine, or trying out features under development. This is a
+rapidly changing source of code and can become unstable at any point.
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+PLAY [test module] *****************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [test_my_own_module] **********************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [info] ************************************************************************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": "STATUS file exists."
+}
+
+PLAY RECAP *************************************************************************************************************************************************************************************************
+localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
+```
+
+**Шаг 7.** Выйдите из виртуального окружения.
+
+**Шаг 8.** Инициализируйте новую collection: `ansible-galaxy collection init my_own_namespace.yandex_cloud_elk`.
+
+**Шаг 9.** В эту collection перенесите свой module в соответствующую директорию.
+
+**Шаг 10.** Single task playbook преобразуйте в single task role и перенесите в collection. У role должны быть default всех параметров module.
+
+**Шаг 11.** Создайте playbook для использования этой role.
+
+**Шаг 12.** Заполните всю документацию по collection, выложите в свой репозиторий, поставьте тег `1.0.0` на этот коммит.
+
+**Шаг 13.** Создайте .tar.gz этой collection: `ansible-galaxy collection build` в корневой директории collection.
+
+**Шаг 14.** Создайте ещё одну директорию любого наименования, перенесите туда single task playbook и архив c collection.
+
+**Шаг 15.** Установите collection из локального архива: `ansible-galaxy collection install <archivename>.tar.gz`.
+
+**Шаг 16.** Запустите playbook, убедитесь, что он работает.
+
+**Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
