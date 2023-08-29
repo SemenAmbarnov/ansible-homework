@@ -13,7 +13,11 @@
 
 **Шаг 4.** Проверьте module на исполняемость локально.
 
-![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/e982620a-0a87-4db4-aa47-f10c16ec5877)
+```
+(venv) [sam@localhost ansible]$ python -m ansible.modules.my_own_module payload.json
+
+{"changed": false, "original_message": "Hello Netology!", "message": "file exists", "invocation": {"module_args": {"path": "/tmp/sample.txt", "text": "Hello Netology!"}}}
+```
 
 **Шаг 5.** Напишите single task playbook и используйте module в нём.
 
