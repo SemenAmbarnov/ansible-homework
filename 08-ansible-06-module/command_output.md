@@ -81,6 +81,8 @@ localhost                  : ok=3    changed=0    unreachable=0    failed=0    s
 
 **Шаг 12.** Заполните всю документацию по collection, выложите в свой репозиторий, поставьте тег `1.0.0` на этот коммит.
 
+[my_own_collection v.1.0.0](https://github.com/SemenAmbarnov/my_own_collection/tree/v1.0.0)
+
 **Шаг 13.** Создайте .tar.gz этой collection: `ansible-galaxy collection build` в корневой директории collection.
 
 **Шаг 14.** Создайте ещё одну директорию любого наименования, перенесите туда single task playbook и архив c collection.
