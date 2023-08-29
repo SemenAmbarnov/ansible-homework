@@ -85,10 +85,48 @@ localhost                  : ok=3    changed=0    unreachable=0    failed=0    s
 
 **Шаг 13.** Создайте .tar.gz этой collection: `ansible-galaxy collection build` в корневой директории collection.
 
+```
+[sam@localhost playbook]$ ansible-galaxy collection build
+Created collection for my_own_namespace.my_collection at /home/sam/homework/playbook/my_own_namespace-my_collection-1.0.0.tar.gz
+```
+
 **Шаг 14.** Создайте ещё одну директорию любого наименования, перенесите туда single task playbook и архив c collection.
 
 **Шаг 15.** Установите collection из локального архива: `ansible-galaxy collection install <archivename>.tar.gz`.
 
+```
+[sam@localhost playbook]$ ansible-galaxy collection install my_own_namespace-my_collection-1.0.0.tar.gz
+Starting galaxy collection install process
+Process install dependency map
+Starting collection install process
+Installing 'my_own_namespace.my_collection:1.0.0' to '/home/sam/.ansible/collections/ansible_collections/my_own_namespace/my_collection'
+my_own_namespace.my_collection:1.0.0 was installed successfully
+```
+
+
 **Шаг 16.** Запустите playbook, убедитесь, что он работает.
+
+```
+[sam@localhost playbook]$ ansible-playbook site.yml 
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+PLAY [test module] ***************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [test_my_own_module] ********************************************************************************************************************************************************************************************************************
+changed: [localhost]
+
+TASK [info] **********************************************************************************************************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": "STATUS file recorder."
+}
+
+PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+```
+
 
 **Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
