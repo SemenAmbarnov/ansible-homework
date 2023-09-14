@@ -43,6 +43,7 @@
 2. Если всё отработалось в рамках ожидания — выгрузите схемы workflow для импорта в XML. Файлы с workflow и скриншоты workflow приложите к решению задания.
 
 [Bug Workflow](https://github.com/SemenAmbarnov/ansible-homework/blob/main/09-ci-01-intro/Bug.xml)
+[Epic Workflow](https://github.com/SemenAmbarnov/ansible-homework/blob/main/09-ci-01-intro/Epic.xml)
 
 ---
 
