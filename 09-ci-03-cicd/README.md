@@ -160,4 +160,10 @@ INFO: ------------------------------------------------------------------------
 1. Поменяйте в `pom.xml` блок с зависимостями под ваш артефакт из первого пункта задания для Nexus (java с версией 8_282).
 2. Запустите команду `mvn package` в директории с `pom.xml`, ожидайте успешного окончания.
 3. Проверьте директорию `~/.m2/repository/`, найдите ваш артефакт.
+
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/8ff4a67a-450b-422f-81e1-ae2e9dd40cde)
+
+
 4. В ответе пришлите исправленный файл `pom.xml`.
+
+[Ссылка на maven-metadata.xml](https://github.com/SemenAmbarnov/ansible-homework/blob/main/09-ci-03-cicd/pom.xml) 
