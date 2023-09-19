@@ -143,6 +143,8 @@ INFO: ------------------------------------------------------------------------
 3. Проверьте, что все файлы загрузились успешно.
 4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
 
+[Ссылка на maven-metadata.xml](https://github.com/SemenAmbarnov/ansible-homework/blob/main/09-ci-03-cicd/maven-metadata.xml)    
+
 ### Знакомство с Maven
 
 ### Подготовка к выполнению
