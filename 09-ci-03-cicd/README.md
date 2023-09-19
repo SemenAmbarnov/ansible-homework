@@ -6,6 +6,9 @@
 2. Скачайте пакет sonar-scanner, который вам предлагает скачать SonarQube.
 3. Сделайте так, чтобы binary был доступен через вызов в shell (или поменяйте переменную PATH, или любой другой, удобный вам способ).
 4. Проверьте `sonar-scanner --version`.
+
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/b85ba9d2-ff1e-42e6-99c6-2d0760568fda)
+
 5. Запустите анализатор против кода из директории [example](./example) с дополнительным ключом `-Dsonar.coverage.exclusions=fail.py`.
 6. Посмотрите результат в интерфейсе.
 7. Исправьте ошибки, которые он выявил, включая warnings.
