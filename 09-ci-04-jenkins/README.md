@@ -2,7 +2,7 @@
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
 
-![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/b2efa7ff-b136-4494-a2f0-6c7d3bf363c3) \
+<details><summary>Logs</summary>
 
 ```
 21:16:01 Started by user admin
@@ -251,7 +251,7 @@
 
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
 
-<details><summary>Logs</summary>
+<details><summary>Pipeline_script</summary>
 
 ```
 pipeline {
