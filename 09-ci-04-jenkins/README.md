@@ -2,7 +2,7 @@
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
 
-![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/b2efa7ff-b136-4494-a2f0-6c7d3bf363c3)
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/b2efa7ff-b136-4494-a2f0-6c7d3bf363c3) \
 
 ```
 21:16:01 Started by user admin
@@ -244,6 +244,7 @@
 21:16:52 
 21:16:52 INFO     Pruning extra files from scenario ephemeral directory
 21:16:52 Finished: SUCCESS
+
 ```
 
 
