@@ -749,3 +749,6 @@ node('linux'){
 
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
+
+[Declarative Pipeline](https://github.com/SemenAmbarnov/vector-role/tree/main/vector)
+[Scripted Pipeline](https://github.com/SemenAmbarnov/vector-role/tree/main1/vector)
