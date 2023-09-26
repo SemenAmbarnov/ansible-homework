@@ -679,8 +679,9 @@ Finished: SUCCESS
 
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/0b01f871-3eb6-4b3d-beb0-4b6807fbf70b)
 
-```
 <details><summary>Logs</summary>
+
+```
 
 Scan Multibranch Pipeline Log
 Started by user admin
