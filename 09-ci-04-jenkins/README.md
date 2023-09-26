@@ -725,7 +725,7 @@ Finished: SUCCESS
 ```
 </details>
 
-<details><summary>ScanLogs</summary>
+<details><summary>Logs</summary>
 
 ```
 Branch indexing
@@ -1129,7 +1129,7 @@ INFO     Pruning extra files from scenario ephemeral directory
 Finished: SUCCESS
 
 ```
-
+</details>
 
 
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
