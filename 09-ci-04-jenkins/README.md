@@ -1134,6 +1134,10 @@ Finished: SUCCESS
 
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
+
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/2a4c9d08-b00c-4afe-b733-b971ecefe04b)
+
+
 <details><summary>Pipeline_script</summary>
 
 ```
