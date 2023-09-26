@@ -727,5 +727,25 @@ Finished: SUCCESS
 
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
+<details><summary>Pipeline_script</summary>
+
+```
+node('linux'){
+    stage('Checkout') {
+        git branch: 'main', credentialsId: '98f5fbb9-b278-47f8-9dc4-16c426ecc1a7', url: 'git@github.com:SemenAmbarnov/vector-role.git'
+    }
+    stage("Run playbook"){
+        if ( "${prod_run}" == "true" ){
+            sh 'ansible-playbook site.yml -i inventory/prod.yml'
+        }
+        else{
+            sh 'ansible-playbook site.yml -i inventory/prod.yml --check --diff'
+        }
+        
+    }
+}
+```
+</details>
+
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
