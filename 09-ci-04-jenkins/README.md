@@ -250,6 +250,39 @@
 
 
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+
+<details><summary>Logs</summary>
+
+```
+pipeline {
+    agent {
+        label 'linux'
+    }
+    stages {
+        stage('Git') {
+            steps{
+                git branch: 'main', credentialsId: '98f5fbb9-b278-47f8-9dc4-16c426ecc1a7', url: 'https://github.com/SemenAmbarnov/vector-role.git'
+            }
+        }
+        stage('Molecule install') {
+            steps{
+                sh 'pip install molecule==3.4.0'
+                sh 'pip install "ansible-lint<6.0.0"'
+                sh 'pip install molecule_docker'
+            }
+        }
+        stage('Molecule test'){
+            steps{
+                sh 'molecule test -s centos7'
+                cleanWs()
+            }
+        }
+    }
+}
+```
+
+
+
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
