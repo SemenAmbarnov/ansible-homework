@@ -2,6 +2,9 @@
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
 
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/01c753c1-2a66-4a04-b73b-a5d3cac7a103)
+
+
 <details><summary>Logs</summary>
 
 ```
@@ -673,6 +676,54 @@ Finished: SUCCESS
 
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
+
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/0b01f871-3eb6-4b3d-beb0-4b6807fbf70b)
+
+```
+<details><summary>Logs</summary>
+
+Scan Multibranch Pipeline Log
+Started by user admin
+[Sun Jun 05 20:18:06 UTC 2022] Starting branch indexing...
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+using GIT_SSH to set credentials 
+[INFO] Currently running in a labeled security context
+[INFO] Currently SELinux is 'enforcing' on the host
+ > /usr/bin/chcon --type=ssh_home_t /tmp/jenkins-gitclient-ssh16302324962146270421.key
+ > git ls-remote git@github.com:SemenAmbarnov/-vector-role.git1 # timeout=10
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/caches/git-c070a5ec59905cf850be2e35ef9685e8/.git # timeout=10
+Setting origin to git@github.com:SemenAmbarnov/-vector-role.git1.git
+ > git config remote.origin.url git@github.com:SemenAmbarnov/-vector-role1.git # timeout=10
+Fetching & pruning origin...
+Listing remote references...
+ > git config --get remote.origin.url # timeout=10
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+using GIT_SSH to set credentials 
+[INFO] Currently running in a labeled security context
+[INFO] Currently SELinux is 'enforcing' on the host
+ > /usr/bin/chcon --type=ssh_home_t /var/lib/jenkins/caches/git-c070a5ec59905cf850be2e35ef9685e8@tmp/jenkins-gitclient-ssh11888297281944572661.key
+ > git ls-remote -h git@github.com:SemenAmbarnov/-vector-role.git1 # timeout=10
+Fetching upstream changes from origin
+ > git config --get remote.origin.url # timeout=10
+using GIT_SSH to set credentials 
+[INFO] Currently running in a labeled security context
+[INFO] Currently SELinux is 'enforcing' on the host
+ > /usr/bin/chcon --type=ssh_home_t /var/lib/jenkins/caches/git-c070a5ec59905cf850be2e35ef9685e8@tmp/jenkins-gitclient-ssh8105809330070023487.key
+ > git fetch --tags --progress --prune origin +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking branches...
+  Checking branch main
+      ‘Jenkinsfile’ found
+    Met criteria
+Changes detected: main (d6a3335ed9d0295e132c9049691c9d225ccbfb67 → 88b2b4dff4be3678e38cb7ff1bd5a13a5f494747)
+Scheduled build for branch: main
+Processed 1 branches
+[Sun Jun 05 20:18:10 UTC 2022] Finished branch indexing. Indexing took 3.8 sec
+Finished: SUCCESS
+```
+</details>
+
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
