@@ -5,7 +5,6 @@
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/b2efa7ff-b136-4494-a2f0-6c7d3bf363c3)
 
 ```
-```
 21:16:01 Started by user admin
 21:16:01 Running as SYSTEM
 21:16:01 Building remotely on node1 (linux) in workspace /opt/jenkins_agent/workspace/vector-role
