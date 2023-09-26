@@ -14,7 +14,7 @@
 21:16:01 [WS-CLEANUP] Deleting project workspace...
 21:16:01 [WS-CLEANUP] Deferred wipeout is disabled by the node property...
 21:16:01 The recommended git tool is: NONE
-21:16:01 using credential f4832340-5da4-45a7-abd6-e57396fa3262
+21:16:01 using credential 98f5fbb9-b278-47f8-9dc4-16c426ecc1a7
 21:16:01 Cloning the remote Git repository
 21:16:01 Cloning repository git@github.com:SemenAmbarnov/vector-role.git
 21:16:01  > git init /opt/jenkins_agent/workspace/vector-role # timeout=10
@@ -754,7 +754,7 @@ Running on agent in /opt/jenkins_agent/workspace/vector-role_main
 [Pipeline] checkout
 Selected Git installation does not exist. Using Default
 The recommended git tool is: NONE
-using credential f4832340-5da4-45a7-abd6-e57396fa3262
+using credential 98f5fbb9-b278-47f8-9dc4-16c426ecc1a7
 Fetching changes from the remote Git repository
 Fetching without tags
  > git rev-parse --resolve-git-dir /opt/jenkins_agent/workspace/vector-role_main/.git # timeout=10
@@ -1155,6 +1155,148 @@ node('linux'){
 </details>
 
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
+
+<details><summary>Logs prod_run = true</summary>
+
+```
+Started by user admin
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on node1 in /opt/jenkins_agent/workspace/Scripted Pipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] git
+The recommended git tool is: NONE
+using credential 98f5fbb9-b278-47f8-9dc4-16c426ecc1a7
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /opt/jenkins_agent/workspace/Scripted Pipeline/.git # timeout=10
+ > git config remote.origin.url git@github.com:SemenAmbarnov/test.git # timeout=10
+Fetching upstream changes from git@github.com:SemenAmbarnov/test.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+using GIT_SSH to set credentials 
+[INFO] Currently running in a labeled security context
+[INFO] Currently SELinux is 'enforcing' on the host
+ > /usr/bin/chcon --type=ssh_home_t /opt/jenkins_agent/workspace/Scripted Pipeline@tmp/jenkins-gitclient-ssh10527576957766858331.key
+ > git fetch --tags --progress git@github.com:SemenAmbarnov/test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision ad534b1f802188b95a311546dfbb5ec8b653bee2 (refs/remotes/origin/main)
+Commit message: "test1"
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ad534b1f802188b95a311546dfbb5ec8b653bee2 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main ad534b1f802188b95a311546dfbb5ec8b653bee2 # timeout=10
+ > git rev-list --no-walk ad534b1f802188b95a311546dfbb5ec8b653bee2 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run playbook)
+[Pipeline] sh
++ ansible-playbook site.yml -i inventory/prod.yml
+
+PLAY [Print os facts] **********************************************************
+
+TASK [Gathering Facts] *********************************************************
+/usr/local/lib/python3.6/site-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography and will be removed in a future release.
+  from cryptography.exceptions import InvalidSignature
+ok: [localhost]
+
+TASK [Print OS] ****************************************************************
+ok: [localhost] => {
+    "msg": "CentOS"
+}
+
+TASK [Print fact] **************************************************************
+ok: [localhost] => {
+    "msg": 12
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+```
+
+</details>
+
+<details><summary>Logs prod_run = false</summary>
+
+```
+Started by user admin
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on node1 in /opt/jenkins_agent/workspace/Scripted Pipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] git
+The recommended git tool is: NONE
+using credential 98f5fbb9-b278-47f8-9dc4-16c426ecc1a7
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /opt/jenkins_agent/workspace/Scripted Pipeline/.git # timeout=10
+ > git config remote.origin.url git@github.com:SemenAmbarnov/test.git # timeout=10
+Fetching upstream changes from git@github.com:SemenAmbarnov/test.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+using GIT_SSH to set credentials 
+[INFO] Currently running in a labeled security context
+[INFO] Currently SELinux is 'enforcing' on the host
+ > /usr/bin/chcon --type=ssh_home_t /opt/jenkins_agent/workspace/Scripted Pipeline@tmp/jenkins-gitclient-ssh17787966157368337539.key
+ > git fetch --tags --progress git@github.com:SemenAmbarnov/test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision ad534b1f802188b95a311546dfbb5ec8b653bee2 (refs/remotes/origin/main)
+Commit message: "test1"
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ad534b1f802188b95a311546dfbb5ec8b653bee2 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main ad534b1f802188b95a311546dfbb5ec8b653bee2 # timeout=10
+ > git rev-list --no-walk ad534b1f802188b95a311546dfbb5ec8b653bee2 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run playbook)
+[Pipeline] sh
++ ansible-playbook site.yml -i inventory/prod.yml --check --diff
+
+PLAY [Print os facts] **********************************************************
+
+TASK [Gathering Facts] *********************************************************
+/usr/local/lib/python3.6/site-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography and will be removed in a future release.
+  from cryptography.exceptions import InvalidSignature
+ok: [localhost]
+
+TASK [Print OS] ****************************************************************
+ok: [localhost] => {
+    "msg": "CentOS"
+}
+
+TASK [Print fact] **************************************************************
+ok: [localhost] => {
+    "msg": 12
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+```
+
+</details>
+
+
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
 
 [Declarative Pipeline](https://github.com/SemenAmbarnov/vector-role/tree/main/vector)
