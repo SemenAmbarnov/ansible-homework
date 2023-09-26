@@ -246,7 +246,7 @@
 21:16:52 Finished: SUCCESS
 
 ```
-
+</details>
 
 
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
@@ -280,7 +280,7 @@ pipeline {
     }
 }
 ```
-
+</details>
 
 
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
