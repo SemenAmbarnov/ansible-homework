@@ -2,6 +2,9 @@
 
 1. Создайте новый проект в teamcity на основе fork.
 2. Сделайте autodetect конфигурации.
+
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/b4715f73-7170-44de-9c59-8b516cb29bf3)
+
 3. Сохраните необходимые шаги, запустите первую сборку master.
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
 5. Для deploy будет необходимо загрузить [settings.xml](./teamcity/settings.xml) в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
