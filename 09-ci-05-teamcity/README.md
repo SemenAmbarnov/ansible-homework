@@ -10,7 +10,8 @@
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/9f3f035a-87f8-4cbf-b3d9-43c8a53d5ac0)
 
 <details><summary>Logs</summary>
-```
+  
+```  
 Build 'netology / Build' #1, default branch 'master'
 Triggered 2023-09-27 08:02:40 by 'Git'
 Started 2023-09-27 08:02:42 on agent 'ip_130.193.37.216'
@@ -1108,6 +1109,7 @@ TeamCity server version is 2023.05.4 (build 129421), server timezone: GMT (UTC)
 [08:03:14]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
 [08:03:14] : Build finished
 ```
+
 </details>
 
 
