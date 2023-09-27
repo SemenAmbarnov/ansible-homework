@@ -1669,9 +1669,31 @@ TeamCity server version is 2023.05.4 (build 129421), server timezone: GMT (UTC)
 
 9. Создайте отдельную ветку `feature/add_reply` в репозитории.
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
+
+Welcomer.java  
+
+```
+    public String sayHunter() {
+            return "When the first hunter succumbed to the curse of blood, nightmare filled the streets of Yarnam.";
+    }
+```
+
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
+
+WelcomerTest.java  
+
+```
+	@Test
+	public void netologySaysHunter() {
+		assertThat(welcomer.sayHunter(), containsString("hunter"));
+	}
+```
 12. Сделайте push всех изменений в новую ветку репозитория.
 13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
+
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/92c66be3-4fb0-4724-8ed8-fdfc88172bd5)
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/db1afaee-d1eb-43c3-8210-98cde6c393b8)
+
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
