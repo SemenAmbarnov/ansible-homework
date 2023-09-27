@@ -1663,6 +1663,10 @@ TeamCity server version is 2023.05.4 (build 129421), server timezone: GMT (UTC)
 </details>
 
 8. Мигрируйте `build configuration` в репозиторий.
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/c6b65b68-e85a-4c50-9404-53cd77e386ba)
+
+[Ссылка на .teamcity](https://github.com/SemenAmbarnov/example-teamcity/tree/master/.teamcity)
+
 9. Создайте отдельную ветку `feature/add_reply` в репозитории.
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
