@@ -2216,5 +2216,5 @@ TeamCity server version is 2023.05.4 (build 129421), server timezone: GMT (UTC)
 
 19. В ответе пришлите ссылку на репозиторий.
 
-[Ссылка на репозиторий](https://github.com/SemenAmbarnov/example-teamcity/tree/master)
-[Ссылка на репозиторий](https://github.com/SemenAmbarnov/example-teamcity/tree/feature/add_reply)
+[Ссылка на репозиторий master](https://github.com/SemenAmbarnov/example-teamcity/tree/master) \
+[Ссылка на репозиторий feature/add_reply](https://github.com/SemenAmbarnov/example-teamcity/tree/feature/add_reply)
