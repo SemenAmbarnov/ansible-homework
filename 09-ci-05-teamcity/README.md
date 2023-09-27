@@ -1116,6 +1116,9 @@ TeamCity server version is 2023.05.4 (build 129421), server timezone: GMT (UTC)
 
 
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/667142af-ba6a-40c5-bcf6-f831527cb468)
+
+
 5. Для deploy будет необходимо загрузить [settings.xml](./teamcity/settings.xml) в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
 6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
