@@ -2206,5 +2206,11 @@ TeamCity server version is 2023.05.4 (build 129421), server timezone: GMT (UTC)
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/81c40963-815c-49b7-b10c-3942d4986f41)
 
 17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/738b30b6-a8b5-41cc-bd3f-52c46439711b)
+
+
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
+
+
+
 19. В ответе пришлите ссылку на репозиторий.
