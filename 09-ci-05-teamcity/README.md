@@ -2211,6 +2211,10 @@ TeamCity server version is 2023.05.4 (build 129421), server timezone: GMT (UTC)
 
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
 
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/db4e8ba6-fb5d-4b22-8220-384a05fc95b0)
 
 
 19. В ответе пришлите ссылку на репозиторий.
+
+[Ссылка на репозиторий](https://github.com/SemenAmbarnov/example-teamcity/tree/master)
+[Ссылка на репозиторий](https://github.com/SemenAmbarnov/example-teamcity/tree/feature/add_reply)
