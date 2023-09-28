@@ -297,6 +297,9 @@ Job succeeded
 ```
 </details>
 
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/a26c450c-75a1-4aa6-b520-e17252cee09e)
+
+
 ### Product Owner
 
 Вашему проекту нужна бизнесовая доработка: нужно поменять JSON ответа на вызов метода GET `/rest/api/get_info`, необходимо создать Issue в котором указать:
