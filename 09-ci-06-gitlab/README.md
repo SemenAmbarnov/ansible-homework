@@ -30,7 +30,7 @@
 8.* (задание необязательное к выполению) При комите в ветку master после сборки должен подняться pod в kubernetes. Примерный pipeline для push в kubernetes по [ссылке](https://github.com/awertoss/devops-netology/blob/main/09-ci-06-gitlab/gitlab-ci.yml).
 Если вы еще не знакомы с k8s - автоматизируйте сборку и деплой приложения в docker на виртуальной машине.
 
-###Для тестов использовал гитлаб с работы. Запускал на shared раннере dind. Переменные прописывал непосредственно в окружении проекта.
+### Для тестов использовал гитлаб с работы. Запускал на shared раннере dind. Переменные прописывал непосредственно в окружении проекта.
 
 ![image](https://github.com/SemenAmbarnov/mnt-homeworks/assets/92155007/e11e2c93-8832-40cd-a473-9cee09bcac90)
 ![image](https://github.com/SemenAmbarnov/mnt-homeworks/assets/92155007/9939dbaa-57c2-44ee-8838-94c8f4f7c26f)
