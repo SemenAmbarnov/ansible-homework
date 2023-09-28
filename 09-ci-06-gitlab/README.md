@@ -184,6 +184,8 @@ Job succeeded
 2. Внести изменения по тексту из задания.
 3. Подготовить Merge Request, влить необходимые изменения в `master`, проверить, что сборка прошла успешно.
 
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/118dd26b-bbbc-4556-aba0-54289081e064)
+
 
 ### Tester
 
@@ -191,6 +193,11 @@ Job succeeded
 
 1. Поднять докер-контейнер с образом `python-api:latest` и проверить возврат метода на корректность.
 2. Закрыть Issue с комментарием об успешности прохождения, указав желаемый результат и фактически достигнутый.
+
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/08750fd5-26ef-4234-a519-8bbe866bd75c)
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/9d91f8a4-9d9f-4b94-b6f4-82cd2757c5c4)
+
+
 
 ## Итог
 
