@@ -51,34 +51,34 @@ Pulling docker image docker:20.10.5-dind ...
 Using docker image sha256:0a9822c8848df3eb0a1562e553fdd54215939ef0a528434ee026c64ff645148c for docker:20.10.5-dind with digest docker@sha256:e4ecd4e9ad5140d584669451b05e406d8cf7603e51972b862178ad93c38b2b08 ...
 WARNING: Service docker:20.10.5-dind is already created. Ignoring.
 Waiting for services to be up and running (timeout 30 seconds)...
-*** WARNING: Service runner-atkn1sx-project-57-concurrent-0-81d68747b58428a0-docker-0 probably didn't start properly.
+*** WARNING: Service runner-atkn1sx-project-57-concurrent-0-2e9708612acb8e16-docker-0 probably didn't start properly.
 Health check error:
-service "runner-atkn1sx-project-57-concurrent-0-81d68747b58428a0-docker-0-wait-for-service" timeout
+service "runner-atkn1sx-project-57-concurrent-0-2e9708612acb8e16-docker-0-wait-for-service" timeout
 Health check container logs:
 Service container logs:
-2023-09-28T08:17:11.326011269Z Generating RSA private key, 4096 bit long modulus (2 primes)
-2023-09-28T08:17:12.740628422Z ..............................................................................................................................................++++
-2023-09-28T08:17:14.005027354Z .................................................................................................................................++++
-2023-09-28T08:17:14.006017841Z e is 65537 (0x010001)
-2023-09-28T08:17:14.038965637Z Generating RSA private key, 4096 bit long modulus (2 primes)
-2023-09-28T08:17:14.267959636Z .....................++++
-2023-09-28T08:17:14.780040805Z ..................................................++++
-2023-09-28T08:17:14.780983598Z e is 65537 (0x010001)
-2023-09-28T08:17:14.841031820Z Signature ok
-2023-09-28T08:17:14.841056069Z subject=CN = docker:dind server
-2023-09-28T08:17:14.841206448Z Getting CA Private Key
-2023-09-28T08:17:14.867663233Z /certs/server/cert.pem: OK
-2023-09-28T08:17:14.871797633Z Generating RSA private key, 4096 bit long modulus (2 primes)
-2023-09-28T08:17:15.266550780Z ......................................++++
-2023-09-28T08:17:16.665919356Z .............................................................................................................................................++++
-2023-09-28T08:17:16.666849739Z e is 65537 (0x010001)
-2023-09-28T08:17:16.717468635Z Signature ok
-2023-09-28T08:17:16.717505324Z subject=CN = docker:dind client
-2023-09-28T08:17:16.717714646Z Getting CA Private Key
-2023-09-28T08:17:16.746469504Z /certs/client/cert.pem: OK
-2023-09-28T08:17:16.802684708Z time="2023-09-28T08:17:16.802442689Z" level=info msg="Starting up"
-2023-09-28T08:17:16.804598191Z time="2023-09-28T08:17:16.804470258Z" level=warning msg="could not change group /var/run/docker.sock to docker: group docker not found"
-2023-09-28T08:17:16.804739560Z failed to load listeners: can't create unix socket /var/run/docker.sock: device or resource busy
+2023-09-28T08:23:27.213511249Z Generating RSA private key, 4096 bit long modulus (2 primes)
+2023-09-28T08:23:27.618232886Z .......................................++++
+2023-09-28T08:23:28.079508134Z .............................................++++
+2023-09-28T08:23:28.080439410Z e is 65537 (0x010001)
+2023-09-28T08:23:28.111046219Z Generating RSA private key, 4096 bit long modulus (2 primes)
+2023-09-28T08:23:28.154243796Z ..++++
+2023-09-28T08:23:28.570033297Z ........................................++++
+2023-09-28T08:23:28.570959773Z e is 65537 (0x010001)
+2023-09-28T08:23:28.625004973Z Signature ok
+2023-09-28T08:23:28.625054820Z subject=CN = docker:dind server
+2023-09-28T08:23:28.625237562Z Getting CA Private Key
+2023-09-28T08:23:28.652643864Z /certs/server/cert.pem: OK
+2023-09-28T08:23:28.657244500Z Generating RSA private key, 4096 bit long modulus (2 primes)
+2023-09-28T08:23:30.076449282Z ...............................................................................................................................................++++
+2023-09-28T08:23:30.187394695Z .........++++
+2023-09-28T08:23:30.188356339Z e is 65537 (0x010001)
+2023-09-28T08:23:30.244830585Z Signature ok
+2023-09-28T08:23:30.244890177Z subject=CN = docker:dind client
+2023-09-28T08:23:30.245130838Z Getting CA Private Key
+2023-09-28T08:23:30.275031171Z /certs/client/cert.pem: OK
+2023-09-28T08:23:30.328024268Z time="2023-09-28T08:23:30.327682349Z" level=info msg="Starting up"
+2023-09-28T08:23:30.330725352Z time="2023-09-28T08:23:30.330565290Z" level=warning msg="could not change group /var/run/docker.sock to docker: group docker not found"
+2023-09-28T08:23:30.330784557Z failed to load listeners: can't create unix socket /var/run/docker.sock: device or resource busy
 *********
 Pulling docker image docker:20.10.5 ...
 Using docker image sha256:1588477122de4fdfe9fcb9ddeeee6ac6b93e9e05a65c68a6e22add0a98b8e0fe for docker:20.10.5 with digest docker@sha256:7ed427295687586039ff3433bb9b4419c5cf1e6294025dadf7641126665a78f5 ...
@@ -89,50 +89,50 @@ Getting source from Git repository
 00:01
 Fetching changes with git depth set to 20...
 Reinitialized existing Git repository in /builds/semen/netology/.git/
-Checking out 3422781d as main...
+Checking out 48a8c531 as main...
 Skipping Git submodules setup
 Executing "step_script" stage of the job script
-00:03
+00:02
 Using docker image sha256:1588477122de4fdfe9fcb9ddeeee6ac6b93e9e05a65c68a6e22add0a98b8e0fe for docker:20.10.5 with digest docker@sha256:7ed427295687586039ff3433bb9b4419c5cf1e6294025dadf7641126665a78f5 ...
 $ docker build -t $CI_REGISTRY/semen/netology/hello:gitlab-$CI_COMMIT_SHORT_SHA .
-#2 [internal] load .dockerignore
-#2 sha256:426d8676076bad7882cb0ddbd6d1ac744876e5eddb4c8d55048e47979509c21f
-#2 transferring context: 2B done
-#2 DONE 0.0s
 #1 [internal] load build definition from Dockerfile
-#1 sha256:6a0c02bad559058ae521b23b1e784d1df7cbb5dfab3d93584965fb076fe40b2e
+#1 sha256:721ea849ffb6e7e4b7153fbac7f2da94da82e1c601912a5e44198456f37e2686
 #1 transferring dockerfile: 257B done
 #1 DONE 0.0s
+#2 [internal] load .dockerignore
+#2 sha256:8f5fa1bef66e93700f967f960778bbb29abf8999625214705888c3506122d94b
+#2 transferring context: 2B done
+#2 DONE 0.0s
 #3 [internal] load metadata for docker.io/library/centos:7
 #3 sha256:30875b35a89c8e8a29cd7cf120689bb68cdab8d769419707e07138dfe977d237
-#3 DONE 0.4s
-#9 [1/6] FROM docker.io/library/centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4
-#9 sha256:8aee2df8eae94a334b616b2360efaff20c8e0722b9e9251907e0264f86e84fe1
-#9 DONE 0.0s
-#7 [internal] load build context
-#7 sha256:45ff1ccb41300db1f46c2908e155d62c6f4836fb46c9498b64b4d51bfaf0d360
-#7 transferring context: 553B done
-#7 DONE 0.0s
-#4 [5/6] COPY /python_api/app.py /python_api/app.py
-#4 sha256:8c9f2d509ef7f0e819fd60710e7eea0786ad37365016a63edbde7d517ae93598
-#4 CACHED
-#6 [3/6] COPY requirements.txt requirements.txt
-#6 sha256:3aa0f939e237210d6673b7f55dffeb4dfcac9648e42f71a20180f33f635b2b2e
-#6 CACHED
-#8 [2/6] RUN yum install python3 python3-pip -y
-#8 sha256:f1144206e2c393ce7dae78da202bcabe051960e4ee53a33abc414e5f30a9c4cd
-#8 CACHED
-#5 [4/6] RUN pip3 install -r requirements.txt
-#5 sha256:02b69637d62b104831a36ff1260d22b7dfea6bdeedf6f4aafe7e0098c046b42c
+#3 DONE 1.0s
+#10 [1/6] FROM docker.io/library/centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4
+#10 sha256:8aee2df8eae94a334b616b2360efaff20c8e0722b9e9251907e0264f86e84fe1
+#10 DONE 0.0s
+#8 [internal] load build context
+#8 sha256:d120c5ae3579570cf114bb17db80c4e6da2694fd2364b344308af8b9e93789b6
+#8 transferring context: 553B done
+#8 DONE 0.0s
+#9 [2/6] RUN yum install python3 python3-pip -y
+#9 sha256:f1144206e2c393ce7dae78da202bcabe051960e4ee53a33abc414e5f30a9c4cd
+#9 CACHED
+#5 [5/6] COPY /python_api/app.py /python_api/app.py
+#5 sha256:d110fc18879109aed0fdc201550fcba2373a2294dd679e77f6aa714db595ab1e
 #5 CACHED
-#10 [6/6] WORKDIR python_api
-#10 sha256:25f475072d85666161dd28cc7216240d9ad0a95ba08b37d3985362c227d83156
-#10 CACHED
+#7 [3/6] COPY requirements.txt requirements.txt
+#7 sha256:fd9954c420d56d551704286a20de254e85d782d040fde85c387aef659a0819d0
+#7 CACHED
+#6 [4/6] RUN pip3 install -r requirements.txt
+#6 sha256:e8b663d48272a0a5d0c3cbe8164b7d3d75103e13f8ee18b174c3f82c7e0eedae
+#6 CACHED
+#4 [6/6] WORKDIR python_api
+#4 sha256:5f4bf854d3c0f0ebc5be7df08c4d1f0d7b6e486155c96b5e3e4e1f1733081736
+#4 CACHED
 #11 exporting to image
-#11 sha256:0e270da4016bad3d718b2a46f02cb72ef26462c32312d3c6e6aa3fdffd5d01d4
+#11 sha256:2308eda2f9fb6160716837eb6d09ead81ad67cebaed978b719c2eb2dd81387be
 #11 exporting layers done
 #11 writing image sha256:cda62445480ffc84a1e9d19e8dfa54e583de5b7b9041c07e68e2d0cbd5683de6 done
-#11 naming to 192.168.103.44:5005/semen/netology/hello:gitlab-3422781d done
+#11 naming to 192.168.103.44:5005/semen/netology/hello:gitlab-48a8c531 done
 #11 DONE 0.0s
 $ docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 WARNING! Using --password via the CLI is insecure. Use --password-stdin.
@@ -149,13 +149,13 @@ ada6682943e3: Preparing
 f2a815b0a7b6: Preparing
 174f56854903: Preparing
 174f56854903: Waiting
-5f70bf18a086: Mounted from semen/netology/python-api
-2f453ee60677: Mounted from semen/netology/python-api
-ada6682943e3: Mounted from semen/netology/python-api
-f2a815b0a7b6: Mounted from semen/netology/python-api
-3c6df952ff76: Mounted from semen/netology/python-api
-174f56854903: Mounted from semen/netology/python-api
-gitlab-3422781d: digest: sha256:77c196776ee23114ae7e9f669351a83e7953b992d114b0e25be4b9daad57b7bb size: 1572
+3c6df952ff76: Layer already exists
+ada6682943e3: Layer already exists
+5f70bf18a086: Layer already exists
+2f453ee60677: Layer already exists
+f2a815b0a7b6: Layer already exists
+174f56854903: Layer already exists
+gitlab-48a8c531: digest: sha256:77c196776ee23114ae7e9f669351a83e7953b992d114b0e25be4b9daad57b7bb size: 1572
 Job succeeded
 ```
 </details>
