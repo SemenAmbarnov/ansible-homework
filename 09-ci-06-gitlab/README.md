@@ -33,7 +33,7 @@
 ### Для тестов использовал гитлаб с работы. Запускал на shared раннере dind. Переменные прописывал непосредственно в окружении проекта.
 
 ![image](https://github.com/SemenAmbarnov/mnt-homeworks/assets/92155007/e11e2c93-8832-40cd-a473-9cee09bcac90)
-![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/4e7db479-8099-4353-a18a-46d173cb6ab1)
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/df9169c2-5ba7-46da-9c2f-83a6c73f28c3)
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/f29227fc-a8ad-41a8-9420-298bae0dc0c6)
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/199f20be-770f-4a3d-b50f-b5d2ba70f7f2)
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/19638ad8-037c-42c7-a4eb-8ec9a3f3452a)
@@ -160,7 +160,7 @@ Job succeeded
 ```
 </details>
 
-![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/a26c450c-75a1-4aa6-b520-e17252cee09e)
+
 
 
 ### Product Owner
