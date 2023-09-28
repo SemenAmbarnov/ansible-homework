@@ -161,6 +161,7 @@ Job succeeded
 ```
 </details>
 
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/01bb446b-22c3-44d8-91de-300ff5d72c7a)
 
 
 
