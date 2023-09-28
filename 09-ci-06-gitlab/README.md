@@ -172,6 +172,9 @@ Job succeeded
 2. Текст с `{ "message": "Already started" }` на `{ "message": "Running"}`.
 3. Issue поставить label: feature.
 
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/dd65a396-f9d0-44c7-8bc0-0b3808ad82b4)
+
+
 ### Developer
 
 Пришёл новый Issue на доработку, вам нужно:
