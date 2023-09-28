@@ -36,7 +36,8 @@
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/df9169c2-5ba7-46da-9c2f-83a6c73f28c3)
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/f29227fc-a8ad-41a8-9420-298bae0dc0c6)
 ![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/199f20be-770f-4a3d-b50f-b5d2ba70f7f2)
-![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/19638ad8-037c-42c7-a4eb-8ec9a3f3452a)
+![image](https://github.com/SemenAmbarnov/ansible-homework/assets/92155007/8ef54660-c451-4769-bb3d-ab39a7098493)
+
 
 <details><summary>Logs</summary>
   
