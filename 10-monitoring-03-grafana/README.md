@@ -357,3 +357,5 @@ node_filesystem_avail_bytes
 ```
 
 </details>
+
+https://github.com/SemenAmbarnov/ansible-homework/blob/main/10-monitoring-03-grafana/listing_grafana.json
